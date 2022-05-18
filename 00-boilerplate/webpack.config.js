@@ -23,9 +23,8 @@ module.exports = {
         loader: "babel-loader",
       },
       {
-        test: /\.(png|jpg)$/,
-        exclude: /node_modules/,
-        loader: "url-loader",
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
       },
       {
         test: /\.html$/,
@@ -33,15 +32,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        exclude: /node_modules/,
-        use: [
-          {
-            loader: "style-loader",
-          },
-          {
-            loader: "css-loader",
-          },
-        ],
+        use: ["style-loader", "css-loader"],
       },
     ],
   },
