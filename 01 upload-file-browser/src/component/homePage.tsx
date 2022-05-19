@@ -10,6 +10,12 @@ export const HomePage: React.FC = () => {
     console.log(e.target.files[0]);
     setFile(e.target.files[0]);
   };
+  const handleClick = () => {
+    file.text().then((text) => {
+      console.log(text);
+      setResult(text);
+    });
+  };
 
   return (
     <>
@@ -19,11 +25,13 @@ export const HomePage: React.FC = () => {
       <main className={classes.mainContainer}>
         <label htmlFor="file">Upload a file</label>
         <input type="file" onChange={handleSelectFile} />
-        <Button variant="contained" component="span">
+        <Button variant="contained" component="span" onClick={handleClick}>
           Convert
         </Button>
       </main>
-      <section>{result}</section>
+      <section>
+        <textarea cols={100} rows={50} defaultValue={result}></textarea>
+      </section>
     </>
   );
 };
