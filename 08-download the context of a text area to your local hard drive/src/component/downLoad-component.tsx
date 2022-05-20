@@ -28,17 +28,17 @@ export const DownLoadComponent: React.FC = () => {
       <div>
         <h1>You can download the text in the frame</h1>
       </div>
-      <main className={classes.mainContainer}>
+      <main className={classes.textArea}>
         <textarea
-          cols={10}
-          rows={50}
+          cols={40}
+          rows={10}
           defaultValue={text}
           onChange={handleChange}
         ></textarea>
       </main>
-      <section>
+      <section className={classes.downLoadButton}>
         <Button variant="contained" component="span" onClick={handleClick}>
-          Convert
+          Convert to txt
         </Button>
       </section>
     </>

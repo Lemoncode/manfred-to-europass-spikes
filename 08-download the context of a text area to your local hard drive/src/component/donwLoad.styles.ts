@@ -1,16 +1,9 @@
 import { css } from "@emotion/css";
 
-export const mainContainer = css`
-  display: flex;
-  flex-direction: column;
-  & > input:hover {
-    cursor: pointer;
-  }
-  & > span {
-    width: 6rem;
-  }
+export const textArea = css`
+  width: max-content;
 `;
 
-export const input = css`
-  display: none;
+export const downLoadButton = css`
+  margin-top: 1rem;
 `;
