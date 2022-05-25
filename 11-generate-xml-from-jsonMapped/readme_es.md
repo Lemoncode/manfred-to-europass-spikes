@@ -1,5 +1,1 @@
-# 02 Web Boiler plate
-
-## Resumen
-
-Boiler plate en webpack con soporte a Typescript y React 18.x
+In ths proof, you can import a json file to transform with the mapper function.
